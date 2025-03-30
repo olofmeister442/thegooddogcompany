@@ -13,21 +13,29 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: #ffffff;
+    background: linear-gradient(to right, #4CAF50, #45a049);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .logo h1 {
-    color: #4CAF50;
+    color: #ffffff;
     font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -38,13 +46,34 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-links a:hover {
-    color: #4CAF50;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 70%;
 }
 
 .hamburger {
@@ -57,13 +86,14 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: #ffffff;
     transition: all 0.3s ease;
+    border-radius: 3px;
 }
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -510,15 +540,26 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background: white;
+        background: linear-gradient(to right, #4CAF50, #45a049);
         padding: 1rem;
         flex-direction: column;
         text-align: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        gap: 1rem;
     }
 
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links a {
+        padding: 0.8rem 1rem;
+        display: block;
+        border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.2);
     }
 
     .hamburger {
@@ -588,5 +629,115 @@ footer {
 
     .enrichment-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Blog Posts Section */
+.blog-posts {
+    padding: 5rem 5%;
+    background-color: #ffffff;
+}
+
+.blog-posts h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+/* Differentiator Section */
+.differentiator {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+}
+
+.diff-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.diff-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.diff-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.diff-content p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .diff-content h2 {
+        font-size: 2rem;
+    }
+
+    .diff-content p {
+        font-size: 1.1rem;
     }
 } 
