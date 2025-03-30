@@ -6,6 +6,7 @@
     <title>The Good Dog Company - Enrichment for Every Dog</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cooper+Hewitt:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -55,7 +56,7 @@
                         <a href="#contact" class="cta-button">Let's Play—Book Your Tour!</a>
                     </div>
                     <div class="tour-image">
-                        <img src="images/facility-tour.jpg" alt="Dog facility tour">
+                        <img src="assets/images/.jpg" alt="Dog facility tour">
                     </div>
                 </div>
             </div>
@@ -218,10 +219,18 @@
                     </div>
                 </div>
                 <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="tel" placeholder="Your Phone">
-                    <textarea placeholder="Your Message" required></textarea>
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                    
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    
+                    <label for="phone">Your Phone</label>
+                    <input type="tel" id="phone" placeholder="Enter your mobile number">
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                    
                     <button type="submit" class="cta-button">Send Message</button>
                 </form>
             </div>
@@ -248,11 +257,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 The Good Dog Company. All rights reserved.</p>
+            <p>&copy; 2025 The Good Dog Company. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html> 
-</html> 
+</html>
