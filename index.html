@@ -12,7 +12,7 @@
     <main>
     <nav class="navbar">
         <div class="logo">
-            <img src="assets/images/logo.png" alt="The Good Dog Company Logo" />
+            <img src="assets/images/logo1.png" alt="The Good Dog Company Logo" />
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -29,7 +29,8 @@
 
         <section class="hero" id="home">
             <video class="hero-video" autoplay loop muted playsinline>
-                <source src="videos/hero-video.mp4" type="video/mp4">
+                <source src="assets/images/Centre/2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -55,8 +56,38 @@
                         <p>Chat with our team about how we personalize every dog's experience to keep them mentally and physically stimulated.</p>
                         <a href="#contact" class="cta-button">Let's Play—Book Your Tour!</a>
                     </div>
-                    <div class="tour-image">
-                        <img src="assets/images/.jpg" alt="Dog facility tour">
+                </div>
+                
+                <div class="tour-gallery">
+                    <div class="gallery-grid">
+                        <!-- Images -->
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/1.jpg" alt="Indoor Playroom">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/2.jpg" alt="Splash Pool">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/3.jpg" alt="Agility Course">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/4.jpg" alt="Sandbox Area">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/5.jpg" alt="Rest Area">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/6.jpg" alt="Our Team">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/7.jpg" alt="Our Team">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/8.jpg" alt="Our Team">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/images/Centre/9.jpg" alt="Our Team">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,7 +182,7 @@
                     </blockquote>
                 </div>
                 <div class="about-image">
-                    <img src="images/founder.jpg" alt="Monisha with her dog">
+                    <img src="assets/images/Centre/10.jpg" alt="Our Team">
                 </div>
             </div>
         </section>
@@ -218,21 +249,6 @@
                         <p>Instagram: @thegooddogcompany.in</p>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="Enter your full name" required>
-                    
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
-                    
-                    <label for="phone">Your Phone</label>
-                    <input type="tel" id="phone" placeholder="Enter your mobile number">
-                    
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
-                    
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
             </div>
         </section>
     </main>
@@ -262,6 +278,17 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Lightbox -->
+    <div class="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="" class="lightbox-image">
+            <video controls class="lightbox-video">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
 </body>
-</html> 
 </html>
