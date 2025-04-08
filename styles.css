@@ -58,12 +58,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 200px; /* Increased width for the logo container */
 }
 
-.logo img {
-    height: 100%; /* Make the image fill the container height */
-    width: 100%; /* Make the image fill the container width */
-    object-fit: contain; /* Ensure the image fits properly */
-}
-
 .logo h1 {
     color: #ffffff;
     font-size: 1.8rem;
@@ -80,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-links a {
     text-decoration: none;
-    color: #1d97c8;
+    color: #ffffff;
     font-weight: 500;
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
@@ -90,8 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a:hover {
-    color: #1d97c8;
-    background: rgba(29, 151, 200, 0.1);
+    color: #ffffff;
 }
 
 .nav-links a::after {
@@ -1142,6 +1135,9 @@ footer .footer-content a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+    .logo img {
+        height: 75px; /* Make the image fill the container height */
+    }
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
