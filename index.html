@@ -216,6 +216,11 @@
                 </div>
             </div>
         </section>
+        <section class="terms-section" id="terms" aria-labelledby="terms-section-title">
+            <h2 id="terms-section-title">Terms &amp; Conditions</h2>
+            <p>Important information for dog parents about safety, care and privacy at The Good Dog Company.</p>
+            <button type="button" class="terms-link" aria-haspopup="dialog" aria-controls="terms-dialog">Read our Terms &amp; Conditions <span aria-hidden="true">&rarr;</span></button>
+        </section>
     </main>
 
     <footer>
@@ -230,6 +235,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><button type="button" class="terms-link" aria-haspopup="dialog" aria-controls="terms-dialog">Terms &amp; Conditions</button></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -241,6 +247,35 @@
             <p>&copy; 2025 The Good Dog Company. All rights reserved.</p>
         </div>
     </footer>
+
+    <dialog id="terms-dialog" class="terms-dialog" aria-labelledby="terms-title">
+        <div class="terms-header">
+            <h2 id="terms-title">Terms &amp; Conditions</h2>
+            <button type="button" class="terms-close" aria-label="Close terms and conditions">&times;</button>
+        </div>
+        <div class="terms-body" tabindex="0" role="region" aria-label="Terms and conditions content">
+            <p class="terms-intro">IMPORTANT INFORMATION FOR ALL DOG PARENTS</p>
+            <h3>Keeping Every Good Dog Safe</h3>
+            <p>At The Good Dog Company, we take your dog’s safety very seriously — even when the dogs themselves are busy taking playtime seriously!</p>
+            <p>Our team takes every reasonable precaution to keep Play, Day Care and Boarding safe, happy and well supervised. Dogs are not simply put into groups and left to figure things out. We use the information shared by the dog parents in the registration/intake form, along with our own observations of each dog, to decide how and when they can socialise and participate in group activities.</p>
+            <h3>A Little Honesty Goes a Long Way</h3>
+            <p>We rely on the dog parents to give us complete and accurate information about their dog’s temperament, behaviour, socialisation history, medical conditions and any known sensitivities or limitations.</p>
+            <p>If you tell us that your dog is friendly, comfortable around other dogs and has no known behavioural concerns, we use that information when planning their interactions.</p>
+            <p>That said, dogs are dogs! Even the gentlest pup can occasionally have a sudden startle response, unexpected reaction or accidental interaction. While our team maintains active supervision and takes every reasonable precaution, it is not possible to predict every split-second interaction between the dogs.</p>
+            <p>If an incident is found to have resulted from a failure of reasonable care, or a lapse in our established safety protocols, The Good Dog Company will take appropriate corrective action.</p>
+            <p>However, where an incident is accidental or unforeseeable and occurs despite reasonable care and supervision — including where relevant behavioural, medical or other information has not been disclosed to us — The Good Dog Company cannot be held responsible for circumstances that could not reasonably have been anticipated or prevented.</p>
+            <p>For this reason, please tell us about anything that could be important to your dog’s care in the registeration/intake form — including previous incidents, reactivity, fear or anxiety, resource guarding, discomfort, medical conditions, pain, physical limitations or anything else that may affect how your dog interacts with people or other dogs.</p>
+            <p>More information = better care. Always.</p>
+            <h3>CCTV &amp; Privacy</h3>
+            <p>Our premises are monitored by CCTV as part of our safety and security measures. CCTV footage may capture other dogs, parents, staff members and visitors, and is therefore subject to privacy considerations.</p>
+            <p>Our CCTV cameras are there first and foremost to help us maintain a safe and secure environment for all our four-legged and two-legged guests.</p>
+            <p>Because our cameras may also capture other dogs, parents, staff and visitors, footage cannot ordinarily be shared on individual request. We take everyone's privacy seriously — just as we take everyone's safety seriously.</p>
+            <p>In the event of a serious safety concern, significant incident or legitimate legal/regulatory requirement, relevant footage may be reviewed internally and, where appropriate, shared with the concerned parties or authorised authorities in accordance with applicable law and privacy requirements.</p>
+            <h3>Our Promise</h3>
+            <p>We may not be able to promise that dogs will never have an unexpected “oops!” moment — because, well, they are dogs.</p>
+            <p>What we can promise is that we will always work to provide responsible supervision, thoughtful socialisation, honest communication and a safe, happy environment for every Good Dog in our care.</p>
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 

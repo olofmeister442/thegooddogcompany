@@ -1,3 +1,82 @@
+/* Compact footer link and accessible native terms dialog. */
+.terms-section {
+    padding: 48px 5%;
+    background: #f9f9f9;
+    text-align: center;
+    scroll-margin-top: 100px;
+}
+.terms-section h2 { color: #333; margin-bottom: 12px; }
+.terms-section p { max-width: 620px; margin: 0 auto 12px; }
+.terms-section .terms-link { color: #333; font-weight: 700; min-height: 44px; }
+.terms-section .terms-link:hover { color: #333; }
+.terms-link {
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    padding: 8px 0;
+}
+.terms-link:hover { color: #16789f; }
+.terms-link:focus-visible, .terms-close:focus-visible, .terms-body:focus-visible {
+    outline: 3px solid #1d97c8;
+    outline-offset: 3px;
+}
+body.terms-open { overflow: hidden; }
+.terms-dialog {
+    margin: auto;
+    padding: 0;
+    width: min(720px, calc(100% - 32px));
+    max-height: 85vh;
+    max-height: 85dvh;
+    border: 0;
+    border-radius: 18px;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+.terms-dialog[open] { display: flex; flex-direction: column; }
+.terms-dialog::backdrop { background: rgba(0, 0, 0, .6); }
+.terms-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background: #f9c64a;
+    flex-shrink: 0;
+}
+.terms-header h2 { margin: 0; font-size: clamp(1.2rem, 4vw, 1.6rem); color: #333; }
+.terms-close {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #333;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.terms-body {
+    padding: 24px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    min-height: 0;
+    line-height: 1.75;
+}
+.terms-body p { margin: 0 0 16px; }
+.terms-body h3 { margin: 24px 0 12px; color: #16789f; font-size: 1.15rem; }
+.terms-body .terms-intro { font-size: .8rem; font-weight: 700; letter-spacing: .06em; }
+.terms-body > :last-child { margin-bottom: 0; }
+@media (max-width: 480px) {
+    .terms-header { padding: 14px 16px; }
+    .terms-body { padding: 20px; }
+}
+
 /* Reset and base styles */
 * {
     margin: 0;

@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const termsDialog = document.querySelector('#terms-dialog');
+    const termsLinks = document.querySelectorAll('.terms-link');
+    let termsOpener;
+    const termsBody = document.querySelector('.terms-body');
+
+    termsLinks.forEach(link => link.addEventListener('click', () => {
+        termsOpener = link;
+        termsDialog.showModal();
+        document.body.classList.add('terms-open');
+        termsBody.scrollTop = 0;
+        termsBody.focus();
+    }));
+
+    document.querySelector('.terms-close').addEventListener('click', () => termsDialog.close());
+    // Close only when the interaction starts and ends on the backdrop.
+    let backdropPressed = false;
+    termsDialog.addEventListener('pointerdown', event => {
+        backdropPressed = event.target === termsDialog;
+    });
+    termsDialog.addEventListener('click', event => {
+        if (backdropPressed && event.target === termsDialog) termsDialog.close();
+        backdropPressed = false;
+    });
+    termsDialog.addEventListener('close', () => {
+        document.body.classList.remove('terms-open');
+        termsOpener?.focus({ preventScroll: true });
+    });
+
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links a');
@@ -30,4 +58,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-}); 
+});
